@@ -1,28 +1,35 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import './App.css'
 import Home from './components/Home';
 import Income from './components/Income';
 import Expenditure from './components/Expenditure';
 import History from './components/History';
 import About from './components/About.jsx';
+import Root from './components/Root.jsx';
 
 
 const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root/>}>
+       <Route index element={<Home/>}/>
+       <Route path="/about" element={<About/>}/>
+       <Route path="/expenditure" element={<Expenditure/>}/>
+       <Route path="/history" element={<History/>}/>
+       <Route path="/income" element={<Income/>}/>
+
+      </Route>
+    )
+  )
   return (
-    <Router>
+    
       <div>
     
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/income" component={Income} />
-          <Route path="/expenses" component={Expenditure} />
-          <Route path="/history" component={History} />
-          <Route path="/about" component={About} />
-        </Switch>
+        <RouterProvider router={router}/>
   
       </div>
-    </Router>
+    
   );
 };
 
