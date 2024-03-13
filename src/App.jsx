@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Income from './components/Income';
 import Expenditure from './components/Expenditure';
 import History from './components/History';
+import About from './components/About.jsx';
+
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
           <Route path="/income" component={Income} />
           <Route path="/expenses" component={Expenditure} />
           <Route path="/history" component={History} />
+          <Route path="/about" component={About} />
         </Switch>
   
       </div>
