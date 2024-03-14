@@ -9,7 +9,7 @@ function Expenditure() {
   return (
     <div>
       <h1>Expenditure</h1>
-      <h2>Balance: </h2>
+      <h3>Balance: </h3>
       <section style={{float:'left', display:'grid', marginLeft:'50px'}}>
       <input class="form-control form-control-lg" type="text" placeholder="Name of Transaction" aria-label=".form-control-lg example" style={{padding:'15px', marginBottom:'10px', marginTop:'30px'}}/>
       <input class="form-control form-control-lg" type="text" placeholder="Transaction Amount" aria-label=".form-control-lg example" style={{padding:'15px', marginBottom:'10px'}}/>
