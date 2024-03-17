@@ -9,8 +9,6 @@ import { BrowserRouter } from 'react-router-dom'
 bootstrap
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>ç
     <App />
-    </BrowserRouter>
   </React.StrictMode>
 )
