@@ -5,9 +5,27 @@
   text-align: center;
 }
 
+
 h1 {
   padding: 10px;
 }
+
+.navbar {
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+  list-style-type: none;
+  height: 50px;
+  overflow: hidden;
+}
+.nav-item {
+  text-decoration: none;
+
+}
+.navbar li {
+  display: inline-block;
+  margin-right: 2px; /* Adjust the spacing between items */
+ }
 
 .logo {
   height: 6em;
