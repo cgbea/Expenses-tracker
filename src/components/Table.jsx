@@ -1,5 +1,5 @@
 import React from 'react'
-import 'primereact/resources/themes/md-light-indigo/theme.css'
+import 'primereact/resources/themes/mira/theme.css'
 import {DataTable} from 'primereact/datatable'
 import {Column} from 'primereact/column'
 
@@ -14,7 +14,7 @@ const footer = 'Total:'
 
   return (
     <div>   
-        <DataTable showGridlines value={data} header={header} footer={footer} tableStyle={{ minWidth: '50rem', border:'solid, pink, 1rem'}} style={{marginLeft:'30%', marginTop:'20px'}}>
+        <DataTable value={data} header={header} footer={footer} tableStyle={{ minWidth: '50rem'}} style={{marginLeft:'30%', marginTop:'20px'}}>
     <Column field="expense" header="Expense"></Column>
     <Column field="date" header="Date"></Column>
     <Column field="price" header="Price(£)"></Column>
