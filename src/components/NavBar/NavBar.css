@@ -1,0 +1,47 @@
+
+.navbar {
+  color: white;
+  background-color: orange;
+  list-style-type: none;
+  height: 5rem;
+}
+.navbar-brand {
+  margin-right: 2.5rem;
+  
+}
+.nav-item {
+  text-decoration: none;
+  margin-left: 8px;
+  
+}
+.navbar li {
+  display: inline-block;
+  margin: 1rem;
+  will-change: filter;
+  transition: filter 300ms;
+ }
+ 
+.logo {
+  /* object-fit: cover; */
+  height: 5rem;
+  width:auto;
+  
+}
+.navbar li a:hover {
+  background-color: blueviolet;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
