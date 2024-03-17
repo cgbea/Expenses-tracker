@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import logo from '../assets/logo.jpg'
+
 
 const Root = () => {
   return (
     <div>
-        <ul className='nav'>
+        <ul className='navbar'>
+            <img src={logo} alt="logo" className="logo"/>
             <li>
                 <Link className='nav-item' to="/">Home</Link>
             </li>
