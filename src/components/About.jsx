@@ -1,4 +1,5 @@
 import React from "react";
+import './About.css';
 
 function About() {
   return (
@@ -19,6 +20,7 @@ function About() {
         </div>
         <div className="col-md-3">
           <img
+            id="graph"
             src="src/assets/graph-up.png"
             alt="upwards graph"
             className="img-fluid"
@@ -28,6 +30,7 @@ function About() {
       <div className="row py-3">
         <div className="col-md-3">
           <img
+            id="wallet"
             src="src/assets/wallet.png"
             alt="upwards graph"
             className="img-fluid"
