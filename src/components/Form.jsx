@@ -16,7 +16,7 @@ const saveInput = (event) => {
 
 //When clear button is clicked both input fields are cleared
 const clearInput = () => {
-    setInputData("")
+    setInputData("")    
   }
 
 const handleInputChange = (event) => {
@@ -32,7 +32,7 @@ const handleInputChange = (event) => {
   return (
     <div>
         <section style={{float:'left', display:'grid', marginLeft:'50px'}}>
-    <input className="form-control form-control-lg" type="text" name='expense'onChange={handleInputChange} placeholder="Name of Transaction" aria-label=".form-control-lg example" style={{padding:'15px', marginBottom:'10px', marginTop:'30px'}}/>
+    <input className="form-control form-control-lg" type="text" name='expense' onChange={handleInputChange} placeholder="Name of Transaction" aria-label=".form-control-lg example" style={{padding:'15px', marginBottom:'10px', marginTop:'30px'}}/>
     <input className="form-control form-control-lg" type="number" name='price' onChange={handleInputChange} placeholder="Transaction Amount" aria-label=".form-control-lg example" style={{padding:'15px', marginBottom:'10px'}}/>
 <span className="p-buttonset" style={{float:'left'}}>
   <Button label="Save" onClick={saveInput} style={{backgroundColor:'lightGreen'}} icon="pi pi-check" />
