@@ -4,10 +4,13 @@ import App from './App.jsx'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import * as bootstrap from 'bootstrap'
+import { BrowserRouter } from 'react-router-dom'
 
 bootstrap
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <BrowserRouter>ç
     <App />
-  </React.StrictMode>,
+    </BrowserRouter>
+  </React.StrictMode>
 )
