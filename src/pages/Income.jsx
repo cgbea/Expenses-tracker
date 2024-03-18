@@ -13,7 +13,7 @@ function Income() {
         <div className="col-md-4 form">
           <Form transaction={transaction} setTransaction={setTransaction} />
         </div>
-        <div className="col-md-10 form">
+        <div className="col-md-8 form">
           <Table data={transaction} />
         </div>
       </div>
