@@ -9,7 +9,11 @@ const Form = (props) => {
   //When save button is clicked input data is added to the table.
   const saveInput = (event) => {
     event.preventDefault();
-    setTransaction([...transaction, inputData]);
+    if (inputData.expense === "" || inputData.price ==="" ) {
+      return false
+} else {
+      setTransaction([...transaction, inputData]);
+}
   };
 
   //When clear button is clicked both input fields are cleared
@@ -29,7 +33,7 @@ const Form = (props) => {
 
   return (
     <div>
-      <section style={{ float: "left", display: "grid", marginLeft: "50px" }}>
+      <section>
         <input
           className="form-control form-control-lg"
           type="text"
