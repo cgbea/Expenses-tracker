@@ -1,0 +1,54 @@
+.navbar {
+  color: white;
+  background-color: orange;
+  list-style-type: none;
+  height: 4rem;
+  width: 100%;
+}
+.navbar .navbar-brand  {
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li a {
+  display: block;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  
+}
+.nav-item {
+  text-decoration: none;
+  margin-right: 10px;
+  
+}
+ 
+.logo {
+  /* object-fit: cover; */
+  height: 4rem;
+  width: auto;
+  color:aliceblue;
+  
+}
+.navbar li a:hover {
+  background-color: blueviolet;
+  border-bottom: solid;
+  
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
