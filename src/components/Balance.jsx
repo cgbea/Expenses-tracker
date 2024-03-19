@@ -40,5 +40,4 @@ function Balance() {
     </div>
  );
 }
-
 export default Balance;
