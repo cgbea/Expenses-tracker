@@ -3,28 +3,50 @@ import logo from '../../assets/logo.jpg'
 import '../NavBar/NavBar.css'
 
 function NavBar() {
-    return (
-        <ul className='navbar p-0 m-0'>
-            <img src={logo} alt="logo" className="logo" />
+  return (
+    <div>
+      <div className="navparent">
+        <div className="nav-left-parent" > 
+        <img src={logo} alt="logo" className="logo" />
+          <ul className="navbar p-0 m-0">
             <li className="nav">
-                <Link className='navbar-brand' to="/home">Expense Tracker</Link>
+              <Link className="navbar-brand" to="/home">
+                Spend Sense
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul className="navbar p-0 m-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-                <Link className='nav-link' to="/">Home</Link>
+              <Link className="nav-link" to="/income">
+                Income
+              </Link>
             </li>
             <li className="nav-item">
-                <Link className='nav-link' to="/income">Income</Link>
+              <Link className="nav-link" to="/history">
+                History
+              </Link>
             </li>
             <li className="nav-item">
-                <Link className='nav-link' to="/history">History</Link>
+              <Link className="nav-link" to="/expenditure">
+                Expenditure
+              </Link>
             </li>
             <li className="nav-item">
-                <Link className='nav-link' to="/expenditure">Expenditure</Link>
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
             </li>
-            <li className="nav-item">
-                <Link className='nav-link' to="/about">About</Link>
-            </li>
-        </ul>
-    )
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default NavBar
+export default NavBar;
