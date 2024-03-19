@@ -4,7 +4,7 @@ import Form from './Form'
 import { getBalance } from "../Lib/LocalStorageHelper";
 
 function Expenditure() {
-  const [transaction, setTransaction] = useState([{page: "Expenditure"}]);
+  const [transaction, setTransaction] = useState([{ page: "Expenditure" }]);
 
   return (
     <div>
