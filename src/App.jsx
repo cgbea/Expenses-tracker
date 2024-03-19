@@ -1,12 +1,12 @@
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import './App.css'
-import Home from './components/Home';
-import Income from './components/Income';
-import Expenditure from './components/Expenditure';
-import History from './components/History';
-import About from './components/About.jsx';
-import Root from './components/Root.jsx';
+import Home from './pages/Home.jsx';
+import Income from './pages/Income.jsx';
+import Expenditure from './pages/Expenditure.jsx';
+import History from './pages/History.jsx';
+import About from './pages/About.jsx';
+import Root from './pages/Root.jsx';
 
 
 const App = () => {
@@ -24,11 +24,11 @@ const App = () => {
   )
   return (
     
-      <div>
+      <React.Fragment>
     
         <RouterProvider router={router}/>
   
-      </div>
+      </React.Fragment>
     
   );
 };

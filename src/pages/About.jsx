@@ -1,4 +1,6 @@
 import React from "react";
+import graph from '../assets/graph-up.png';
+import wallet from '../assets/wallet.png';
 import './About.css';
 
 function About() {
@@ -21,7 +23,7 @@ function About() {
         <div className="col-md-3">
           <img
             id="graph"
-            src="src/assets/graph-up.png"
+            src={graph}
             alt="upwards graph"
             className="img-fluid"
           />
@@ -31,8 +33,8 @@ function About() {
         <div className="col-md-3">
           <img
             id="wallet"
-            src="src/assets/wallet.png"
-            alt="upwards graph"
+            src={wallet}
+            alt="wallet"
             className="img-fluid"
           />
         </div>
@@ -57,7 +59,7 @@ function About() {
               <p style={{ textAlign: 'right', fontStyle: 'italic' }}>- Penny Pincher, Manchester</p>
             </div>
             <div className="testimonial-card" style={{ maxWidth: '450px', height: 'auto', wordWrap: 'break-word', display: 'inline-block', marginRight: '10px', backgroundColor: '#f0f0f0', padding: '20px' }}>
-              <p>"I've recommended it to all my friends.<br></br>I feel much more concious about saving money now."</p>
+              <p>"I've recommended it to all my friends.<br></br>I feel much more conscious about saving money now."</p>
               <p style={{ textAlign: 'right', fontStyle: 'italic' }}>Bill Payer, Hull</p>
             </div>
             <div className="testimonial-card" style={{ width: '450px', display: 'inline-block', marginRight: '10px', backgroundColor: '#f0f0f0', padding: '20px' }}>
