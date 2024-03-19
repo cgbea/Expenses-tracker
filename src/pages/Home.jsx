@@ -40,8 +40,8 @@ function Home() {
           </tbody>
         </table>
         <div style={{display:"flex", gap: "2rem", justifyContent:"center", margin: "2rem"}}>
-          <button>Income</button>
-          <button>Expense</button>
+          <button style={{backgroundColor: 'green', color: 'white'}}>Income</button>
+          <button style={{backgroundColor: 'red', color: 'white'}}>Expense</button>
         </div>
       </section>
     </div>
