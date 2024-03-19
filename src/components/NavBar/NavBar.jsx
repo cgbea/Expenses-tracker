@@ -1,13 +1,14 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
-import logo from '../assets/logo.jpg'
+import {Link} from 'react-router-dom'
+import logo from '../../assets/logo.jpg'
+import './NavBar.css'
 
-
-const Root = () => {
-  return (
-    <div>
-        <ul className='navbar'>
+function NavBar () {
+    return (
+        <ul className='navbar p-0 m-0'>
             <img src={logo} alt="logo" className="logo"/>
+            <li>
+                <Link className='navbar-brand' to="/home">Expense Tracker</Link>
+            </li>
             <li>
                 <Link className='nav-item' to="/">Home</Link>
             </li>
@@ -24,9 +25,6 @@ const Root = () => {
                 <Link className='nav-item' to="/about">About</Link>
             </li>
         </ul>
-        <Outlet/>
-    </div>
-  )
+    )
 }
-
-export default Root
+export default NavBar
