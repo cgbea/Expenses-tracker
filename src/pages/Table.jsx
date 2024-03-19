@@ -2,15 +2,21 @@ import React from 'react'
 import 'primereact/resources/themes/mira/theme.css'
 import { DataTable } from 'primereact/datatable'
 import { Column } from 'primereact/column'
-import { getPositiveTransactions, getPositiveTotal, getNegativeTransactions, getNegativeTotal, getBalance } from "../Lib/LocalStorageHelper";
+import { getPositiveTransactions, getPositiveTotal, getNegativeTransactions, getNegativeTotal, readLocalStorage, getBalance } from "../Lib/LocalStorageHelper";
 
 const IncomeTable = (props) => {
   const { data } = props
-
+console.log(props)
+console.log(data)
   const page = data[0].page
   const header = 'Recent Transactions'
   let footer = 'Total: '
   let value = []
+
+  if (page == "Home") {
+    value = readLocalStorage()
+    footer += getBalance()
+  }
 
   if (page == "Income") {
     console.log("Income")
