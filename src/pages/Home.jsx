@@ -1,10 +1,15 @@
 import React from 'react';
 
 function Home() {
+ // Assuming you have a balance data, for demonstration, let's use a static value
+ const balance = 1000; // This should be your actual balance data
+
  return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh',flexDirection:"column" }}>
-      <section style={{padding: '16px',borderRadius:"16px",backgroundColor:"rgba(0,0,0,0.5)", margin:"2rem"}}>
-        Stuff at the top
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: "column" }}>
+      <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "rgba(0,0,0,0.5)", margin: "2rem" }}>
+        <div style={{ fontSize: '24px', color: 'white' }}>
+          Balance: ${balance.toFixed(2)}
+          </div>
       </section>
       <section>
       <table style={{ margin: 'auto', borderCollapse: 'collapse', width: '100%',borderRadius:"16px" }}>
