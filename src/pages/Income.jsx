@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import Table from "./Table";
 import Form from "./Form";
 import { getBalance } from "../Lib/LocalStorageHelper";
-
 function Income() {
   const [transaction, setTransaction] = useState([{ page: "Income" }]);
-
   return (
     <div>
       <h1>Income</h1>
@@ -21,5 +19,4 @@ function Income() {
     </div>
   );
 }
-
 export default Income;
