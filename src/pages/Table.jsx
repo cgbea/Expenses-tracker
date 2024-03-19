@@ -4,7 +4,6 @@ import { DataTable } from 'primereact/datatable'
 import { Column } from 'primereact/column'
 import { getPositiveTransactions, getPositiveTotal, getNegativeTransactions, getNegativeTotal, getBalance } from "../Lib/LocalStorageHelper";
 
-
 const IncomeTable = (props) => {
   const { data } = props
 

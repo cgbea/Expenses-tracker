@@ -1,9 +1,9 @@
 @media screen and (max-width: 767px) {
-    #wallet {
-      display: none;
-    }
-    #graph {
-        height: 30vh;
-    }
+  #wallet {
+    display: none;
   }
-  
+
+  #graph {
+    height: 30vh;
+  }
+}
