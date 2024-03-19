@@ -6,8 +6,7 @@ import { getPositiveTransactions, getPositiveTotal, getNegativeTransactions, get
 
 const IncomeTable = (props) => {
   const { data } = props
-console.log(props)
-console.log(data)
+
   const page = data[0].page
   const header = 'Recent Transactions'
   let footer = 'Total: '
