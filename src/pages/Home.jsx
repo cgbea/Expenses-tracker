@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {getBalance} from '../Lib/LocalStorageHelper'
 function Home() {
  // Assuming you have a balance data, for demonstration, let's use a static value
  const balance = 1000; // This should be your actual balance data
@@ -8,7 +8,7 @@ function Home() {
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: "column" }}>
       <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "rgba(0,0,0,0.5)", margin: "2rem" }}>
         <div style={{ fontSize: '24px', color: 'white' }}>
-          Balance: ${balance.toFixed(2)}
+          Balance: £{getBalance()}
           </div>
       </section>
       <section>
