@@ -1,11 +1,21 @@
 .navbar {
   color: white;
-  background-color: orange;
   list-style-type: none;
   height: 4rem;
   width: 100%;
 }
+.navparent {
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-left-parent {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
 
+}
 .navbar .navbar-brand {
   font-weight: bold;
   color: white;
@@ -36,6 +46,7 @@
 
 .navbar li a:hover {
   border-bottom: solid;
+  color: white;
 }
 
 @keyframes logo-spin {
