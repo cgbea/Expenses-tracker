@@ -47,7 +47,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="row testimonials-row py-4" style={{ overflowX: 'auto', whiteSpace: 'nowrap'}}>
+      <div className="row testimonials-row py-4" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
         <div className="col">
           <div className="testimonials-container" style={{ display: 'inline-block' }}>
             <div className="testimonial-card" style={{ maxWidth: '450px', height: 'auto', wordWrap: 'break-word', display: 'inline-block', marginRight: '10px', backgroundColor: '#f0f0f0', padding: '20px' }}>

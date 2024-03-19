@@ -1,11 +1,11 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.jpg'
 import './NavBar.css'
 
-function NavBar () {
+function NavBar() {
     return (
         <ul className='navbar p-0 m-0'>
-            <img src={logo} alt="logo" className="logo"/>
+            <img src={logo} alt="logo" className="logo" />
             <li className="nav">
                 <Link className='navbar-brand' to="/home">Expense Tracker</Link>
             </li>

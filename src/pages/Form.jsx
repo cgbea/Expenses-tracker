@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import { Button } from "primereact/button";
 import "primeicons/primeicons.css";
 import { readLocalStorage, writeLocalStorage } from "../Lib/LocalStorageHelper"
+
 const Form = (props) => {
   const { transaction, setTransaction } = props;
   const [inputData, setInputData] = useState({ expense: "", date: "", price: "" });
+
   const page = props.transaction[0].page
+
   //When save button is clicked input data is added to the table.
   const saveInput = (event) => {
     event.preventDefault();
     if (inputData.expense === "" || inputData.price === "") {
       return
     } else {
+
       if (page == "Income" && inputData.price < 0) {
         return
       }
@@ -21,17 +25,23 @@ const Form = (props) => {
       let price = parseInt(inputData.price)
       inputData.date = new Date().toLocaleDateString()
       inputData.price = price
+
       let transactionArr = readLocalStorage()
+
       transactionArr.push(inputData)
+
       writeLocalStorage(transactionArr)
+
       setTransaction([...transaction, inputData]);
       clearInput()
     }
   };
+
   //When clear button is clicked both input fields are cleared
   const clearInput = () => {
     setInputData({ expense: "", price: "" });
   };
+
   const handleInputChange = (event) => {
     let name = event.target.name;
     let newValue = event.target.value;
@@ -41,6 +51,7 @@ const Form = (props) => {
       setInputData({ ...inputData, price: newValue });
     }
   };
+
   return (
     <div>
       <section>
@@ -84,4 +95,5 @@ const Form = (props) => {
     </div>
   );
 };
+
 export default Form;

@@ -12,24 +12,24 @@ import Root from './pages/Root.jsx';
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Root/>}>
-       <Route index element={<Home/>}/>
-       <Route path="/about" element={<About/>}/>
-       <Route path="/expenditure" element={<Expenditure/>}/>
-       <Route path="/history" element={<History/>}/>
-       <Route path="/income" element={<Income/>}/>
+      <Route path="/" element={<Root />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/expenditure" element={<Expenditure />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/income" element={<Income />} />
 
       </Route>
     )
   )
   return (
-    
-      <React.Fragment>
-    
-        <RouterProvider router={router}/>
-  
-      </React.Fragment>
-    
+
+    <React.Fragment>
+
+      <RouterProvider router={router} />
+
+    </React.Fragment>
+
   );
 };
 

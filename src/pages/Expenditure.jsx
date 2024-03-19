@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import Table from './Table'
 import Form from './Form'
 import { getBalance } from "../Lib/LocalStorageHelper";
+
 function Expenditure() {
   const [transaction, setTransaction] = useState([{ page: "Expenditure" }]);
+
   return (
     <div>
       <h1>Expenditure</h1>
@@ -19,4 +21,5 @@ function Expenditure() {
     </div>
   )
 }
+
 export default Expenditure
