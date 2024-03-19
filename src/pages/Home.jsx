@@ -1,4 +1,4 @@
-import React from 'react';
+2import React from 'react';
 import { getBalance } from '../Lib/LocalStorageHelper'
 function Home() {
   // Assuming you have a balance data, for demonstration, let's use a static value
