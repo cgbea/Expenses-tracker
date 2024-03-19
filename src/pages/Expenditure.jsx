@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Table from './Table'
 import Form from './Form'
-<<<<<<< HEAD
 import { getBalance } from "../Lib/LocalStorageHelper";
 function Expenditure() {
   const [transaction, setTransaction] = useState([{ page: "Expenditure" }]);
@@ -17,18 +16,6 @@ function Expenditure() {
           <Table data={transaction} />
         </div>
       </div>
-=======
-
-function Expenditure() {
-  const [transaction, setTransaction] = useState([])
-
-  return (
-    <div>
-      <h1>Expenditure</h1>
-      <h3>Balance: </h3>
-      <Form transaction={transaction} setTransaction={setTransaction}/>
-      <Table data={transaction}/>
->>>>>>> 04801db (moved formed,table and root to pages)
     </div>
   )
 }
