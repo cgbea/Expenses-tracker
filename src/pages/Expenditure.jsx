@@ -9,7 +9,11 @@ function Expenditure() {
   return (
     <div>
       <h1>Expenditure</h1>
-      <h3>Balance: {getBalance()}</h3>
+      <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", margin: "2rem" }}>
+        <div style={{ fontSize: '24px', color: 'white' }}>
+          Balance: £{getBalance()}
+        </div>
+      </section>
       <div className="row">
         <div className="col-md-4 form">
           <Form transaction={transaction} setTransaction={setTransaction} />
