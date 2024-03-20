@@ -10,7 +10,7 @@ function NavBar() {
         <img src={logo} alt="logo" className="logo" />
           <ul className="navbar p-0 m-0">
             <li className="nav">
-              <Link className="navbar-brand" to="./index.html">
+              <Link className="navbar-brand" to="/">
                 SpendSense
               </Link>
             </li>
@@ -29,12 +29,12 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/history">
+              <Link className="nav-link" to="/expenditure">
               Expenditure
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/expenditure">
+              <Link className="nav-link" to="/history">
                History
               </Link>
             </li>
