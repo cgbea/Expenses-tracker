@@ -19,7 +19,15 @@
 .navbar .navbar-brand {
   font-weight: bold;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+.navbar .nav-link:hover {
+  background-color: orangered;
+  color: white;
+  height: 100%;
+  font-weight: bold;
+  /* font-style: italic; */
+  border-bottom: 0.3rem solid orangered;
 }
 
 .navbar ul {
@@ -32,16 +40,22 @@
   margin: 0 0.5rem; */
 }
 
-.nav-item {
+.nav-item .nav-link {
   text-decoration: none;
   margin-right: 10px;
 }
 
+.nav-link {
+  font-size: 1.5rem;
+  color: white;
+
+}
 .logo {
   /* object-fit: cover; */
   height: 4rem;
   width: auto;
   color: aliceblue;
+  margin-right: 10px;
 }
 
 .navbar li a:hover {
@@ -62,5 +76,11 @@
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none;
   }
 }
