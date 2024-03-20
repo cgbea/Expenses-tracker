@@ -50,7 +50,7 @@ function About() {
           <div className="col-sm-12">
             <h2>Meet the team</h2>
           </div>
-          <div className="col-sm px-1">
+          <div className="col-md col-sm-4 col-6 px-1">
             <div
               className="card w-100 fw-bolder"
               style={{ padding: "0", textAlign: "center" }}
@@ -82,7 +82,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1">
+          <div className="col-md col-sm-4 col-6 px-1">
             <div
               className="card w-100 fw-bolder"
               style={{ padding: "0", textAlign: "center" }}
@@ -115,7 +115,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1">
+          <div className="col-md col-sm-4 col-6 px-1">
             <div
               className="card w-100 fw-bolder"
               style={{ padding: "0", textAlign: "center" }}
@@ -148,7 +148,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1 fw-bolder">
+          <div className="col-md col-sm-4 col-6 px-1 fw-bolder">
             <div
               className="card w-100"
               style={{ padding: "0", textAlign: "center" }}
@@ -181,7 +181,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1 fw-bolder">
+          <div className="col-md col-sm-4 col-6 px-1 fw-bolder">
             <div
               className="card w-100"
               style={{ padding: "0", textAlign: "center" }}
