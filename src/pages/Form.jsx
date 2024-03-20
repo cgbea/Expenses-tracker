@@ -17,6 +17,8 @@ const Form = (props) => {
   const saveInput = (event) => {
     event.preventDefault();
     if (inputData.expense === "" || inputData.price === "") {
+      setErrorMessage("Please enter both the name of transaction and transaction amount.");
+      setShowErrorModal(true);
       return;
     } else {
       if (page === "Income" && inputData.price < 0) {
@@ -60,7 +62,7 @@ const Form = (props) => {
   };
 
   //Users can only use positive values for income and negative values for expenditure. 
-  //There is a Bootstrap modal to dipslay an error message when incorrect values are used
+  //There is a Bootstrap modal to dipslay error message when incorrect values are used
   return (
     <div>
       <section>
