@@ -77,17 +77,17 @@ const Form = (props) => {
           aria-label=".form-control-lg example"
           style={{ padding: "15px", marginBottom: "10px" }}
         />
-        <span className="p-buttonset" style={{ float: "left" }}>
+        <span className="p-buttonset" style={{ float: "left"}}>
           <Button
             label="Save"
             onClick={saveInput}
-            style={{ backgroundColor: "lightGreen" }}
+            style={{ backgroundColor: "green" }}
             icon="pi pi-check"
           />
           <Button
             label="Cancel"
             onClick={clearInput}
-            style={{ backgroundColor: "tomato" }}
+            style={{ backgroundColor: "red" }}
             icon="pi pi-times"
           />
         </span>
