@@ -7,7 +7,7 @@ function Home() {
 const transaction =[{page:"Home"}]
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: "column" }}>
-      <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", margin: "2rem" }}>
+      <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", margin: "2rem", width: '100%', display: 'flex', justifyContent: 'center' }}>
         <div style={{ fontSize: '24px', color: 'white' }}>
           Balance: £{getBalance()}
         </div>

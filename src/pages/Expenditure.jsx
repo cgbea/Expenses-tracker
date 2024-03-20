@@ -9,7 +9,8 @@ function Expenditure() {
   return (
     <div>
       <h1>Expenditure</h1>
-      <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", margin: "2rem" }}>
+      <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", margin: "2rem", width: '100%', display: 'flex', justifyContent: 'center' }}>
+
         <div style={{ fontSize: '24px', color: 'white' }}>
           Balance: £{getBalance()}
         </div>
