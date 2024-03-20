@@ -4,9 +4,10 @@ import Table from './Table'
 import DataChart from './DataChart'
 
 function History() {
-  const [transaction, setTransaction] = useState([{ page: "History" }]);
+  const [transaction, setTransaction] = useState([{ page: "History", btn: "" }]);
 
   const show = (event) => {
+    console.log(event)
   }
 
   const showTable = (event) => {
@@ -16,23 +17,12 @@ function History() {
   return (
     <div>
       <h1>History</h1>
+
+
+
       <section
-        style={{ float: 'left', display: 'grid', marginLeft: '70px' }}>
-        <Button transaction={transaction} setTransaction={setTransaction}
-          label="All in one"
-          onClick={show}
-          style={{ marginTop: '120px', backgroundColor: 'orange', marginBottom: '5px', width: '130px' }} />
-        <Button transaction={transaction} setTransaction={setTransaction}
-          label="Income"
-          onClick={show}
-          style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px' }} />
-        <Button transaction={transaction} setTransaction={setTransaction}
-          label="Expenditure"
-          onClick={show}
-          style={{ backgroundColor: 'orange' }} />
-      </section>
-      <section
-        style={{ marginTop: '25px', marginLeft: '625px' }}>
+        style={{ marginTop: '25px', display: 'flex', justifyContent: 'flex-end' }}>
+          <div >
         <Button
           label="Table"
           onClick={showTable}
@@ -41,9 +31,36 @@ function History() {
           label="Chart"
           onClick={showTable}
           style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px' }} />
+          </div>
       </section>
-      <Table data={transaction} />
-      <DataChart data={transaction} />
+
+
+
+
+      <div className="row">
+        <div className="col-md-4 form">
+          <section
+            style={{ float: 'left', marginLeft: '70px', display:'flex', flexDirection:'column' }}>
+            <Button transaction={transaction} setTransaction={setTransaction}
+              label="All in one"
+              onClick={show}
+              style={{ marginTop: '80px', backgroundColor: 'orange', marginBottom: '5px', maxwidth: '150px' }} />
+            <Button transaction={transaction} setTransaction={setTransaction}
+              label="Income"
+              onClick={show}
+              style={{ backgroundColor: 'orange', marginBottom: '5px', maxwidth: '10px' }} />
+            <Button transaction={transaction} setTransaction={setTransaction}
+              label="Expenditure"
+              onClick={show}
+              style={{ backgroundColor: 'orange', maxwidth: '150px' }} />
+          </section>
+        </div>
+
+        <div className="col-md-8 form">
+          <Table data={transaction} />
+          {/* <DataChart data={transaction} /> */}
+        </div>
+      </div>
     </div>
   )
 }
