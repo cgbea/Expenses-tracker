@@ -18,7 +18,6 @@ const IncomeTable = (props) => {
   }
 
   if (page == "Income") {
-    console.log("Income")
     footer += getPositiveTotal()
     value = getPositiveTransactions()
   }
@@ -28,10 +27,10 @@ const IncomeTable = (props) => {
     footer += getNegativeTotal()
   }
 
-  // if (page == "History") {
-  //   console.log("History")
-  //   footer += getBalance()
-  // }
+  if (page == "History") {
+    console.log("hello")
+    footer += getBalance()
+  }
 
   return (
     <div>
