@@ -19,7 +19,7 @@ function History() {
             style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px', marginRight: '1rem' }} />
           <Button
             label="Chart"
-            //onClick={showTable}
+            //onClick={showChart}
             style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px' }} />
         </div>
       </section>
@@ -35,11 +35,11 @@ function History() {
             <Button
               label="Income"
               onClick={() => setTransaction([{ page: "History", nameBtn: "Income" }])}
-              style={{ backgroundColor: 'orange', marginBottom: '5px', maxwidth: '10px' }} />
+              style={{ backgroundColor: 'green', marginBottom: '5px', maxwidth: '10px' }} />
             <Button
               label="Expenditure"
               onClick={() => setTransaction([{ page: "History", nameBtn: "Expenditure" }])}
-              style={{ backgroundColor: 'orange', maxwidth: '150px' }} />
+              style={{ backgroundColor: 'red', maxwidth: '150px' }} />
           </section>
         </div>
 

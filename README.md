@@ -18,7 +18,7 @@ The history page has a table with three buttons on the side and two buttons abov
 To access the deployed Netlify webpage click this link: https://group-6-expense-tracker.netlify.app/ 
 
 Below is a screenshot of the SpendSense Expenses Tracker:
-![screenshot]()
+![screenshot](/src/assets/screenshot.png)
 
 # Credits
 Contributors to this group project include:
