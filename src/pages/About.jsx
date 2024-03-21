@@ -9,6 +9,7 @@ function About() {
   return (
     <div className="container">
       <h1>About</h1>
+      {/*This section explains our story */}
       <div className="row">
         <div className="col-md-9 about-text">
           <div className="px-1" style={{ textAlign: "left" }}>
@@ -31,6 +32,7 @@ function About() {
           />
         </div>
       </div>
+  {/*This section explains who we are */}
       <div className="row py-3">
         <div className="col-md-3">
           <img id="wallet" src={wallet} alt="wallet" className="img-fluid" />
@@ -50,7 +52,8 @@ function About() {
           <div className="col-sm-12">
             <h2>Meet the team</h2>
           </div>
-          <div className="col-sm px-1">
+    {/* Cards to display team members GitHub and Linkedin links. */}
+          <div className="col-md col-sm-4 col-6 px-1">
             <div
               className="card w-100 fw-bolder"
               style={{ padding: "0", textAlign: "center" }}
@@ -82,7 +85,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1">
+          <div className="col-md col-sm-4 col-6 px-1">
             <div
               className="card w-100 fw-bolder"
               style={{ padding: "0", textAlign: "center" }}
@@ -115,7 +118,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1">
+          <div className="col-md col-sm-4 col-6 px-1">
             <div
               className="card w-100 fw-bolder"
               style={{ padding: "0", textAlign: "center" }}
@@ -148,7 +151,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1 fw-bolder">
+          <div className="col-md col-sm-4 col-6 px-1 fw-bolder">
             <div
               className="card w-100"
               style={{ padding: "0", textAlign: "center" }}
@@ -181,7 +184,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="col-sm px-1 fw-bolder">
+          <div className="col-md col-sm-4 col-6 px-1 fw-bolder">
             <div
               className="card w-100"
               style={{ padding: "0", textAlign: "center" }}
@@ -216,6 +219,7 @@ function About() {
           </div>
         </div>
       </div>
+{/* Styling for testimonial cards */}
       <div
         className="row testimonials-row py-4"
         style={{ overflowX: "auto", whiteSpace: "nowrap" }}

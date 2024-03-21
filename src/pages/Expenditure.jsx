@@ -9,9 +9,15 @@ function Expenditure() {
   return (
     <div>
       <h1>Expenditure</h1>
-      <h3>Balance: {getBalance()}</h3>
+      
       <div className="row">
         <div className="col-md-4 form">
+        <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", width: '100%', display: 'flex', justifyContent: 'center' }}>
+  {/*This section shows the balance of the account depending on input data */}
+<div style={{ fontSize: '24px', color: 'white' }}>
+  Balance: £{getBalance()}
+</div>
+</section>
           <Form transaction={transaction} setTransaction={setTransaction} />
         </div>
         <div className="col-md-8 form">

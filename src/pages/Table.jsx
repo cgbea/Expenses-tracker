@@ -8,33 +8,35 @@ const IncomeTable = (props) => {
   const { data } = props
 
   const page = data[0].page
+  const nameBtn = data[0].nameBtn
   const header = 'Recent Transactions'
   let footer = 'Total: '
   let value = []
 
-  if (page == "Home") {
-    value = readLocalStorage()
-    footer += getBalance()
+//Get data from local storage  
+  function showValue(page, nameBtn) {
+    if (page == "Home" || nameBtn == "All") {
+      value = readLocalStorage()
+      footer += getBalance()
+    }
+
+    if (page == "Income" || nameBtn == "Income") {
+      value = getPositiveTransactions()
+      footer += getPositiveTotal()
+    }
+
+    if (page == "Expenditure" || nameBtn == "Expenditure") {
+      value = getNegativeTransactions()
+      footer += getNegativeTotal()
+    }
   }
 
-  if (page == "Income") {
-    console.log("Income")
-    footer += getPositiveTotal()
-    value = getPositiveTransactions()
-  }
+  showValue(page, nameBtn)
 
-  if (page == "Expenditure") {
-    value = getNegativeTransactions()
-    footer += getNegativeTotal()
-  }
-
-  // if (page == "History") {
-  //   console.log("History")
-  //   footer += getBalance()
-  // }
 
   return (
     <div>
+    {/* Styling and headers for table display */}
       <DataTable
         value={value}
         header={header}

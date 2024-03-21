@@ -1,64 +1,106 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import 'primereact/resources/themes/mira/theme.css'
+import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
+import { getDateLocalStorage, getAmountPosTrans, getAmountNegTrans } from "../Lib/LocalStorageHelper";
 
-const DataChart = () => {
-  const [chartData, setChartData] = useState({});
-  const [chartOptions, setChartOptions] = useState({});
+export default function DataChart(props) {
+  const { data } = props
 
-  useEffect(() => {
-    const data = {
-      labels: [],
-      incomeData: [{
-        label: 'Ingoing',
+  const nameBtn = data[0].nameBtn
+
+  let incomeData = []
+  let expenditureData = []
+  let newDatasets = []
+  let newlabelIncome = ''
+  let newlabelExpenditure = ''
+
+  if (nameBtn == "All") {
+    incomeData = getAmountPosTrans()
+    expenditureData = getAmountNegTrans()
+    newlabelIncome = "Income"
+    newlabelExpenditure = "Expenditure"
+
+    newDatasets = [
+      {
+        label: newlabelIncome,
         backgroundColor: 'green',
-        data: ''
-      }],
-      expenditureData: [{
-        label: 'Outgoing',
-        backgroundColor: 'tomato',
-        data: ''
-      }],
-    }
+        borderColor: 'green',
+        data: incomeData
+      },
+      {
+        label: newlabelExpenditure,
+        backgroundColor: 'red',
+        borderColor: 'red',
+        data: expenditureData
+      }
+    ]
+  }
 
-    const options = {
-      maintainAspectRatio: false,
-      aspectRatio: 0.8,
-      scales: {
-        x: {
-          ticks: {
-            color: 'blue',
-            font: {
-              weight: 500
-            }
-          },
-          grid: {
-            display: false,
-            drawBorder: false
-          }
-        },
-        y: {
-          ticks: {
-            color: 'blue'
-          },
-          grid: {
-            color: 'black',
-            drawBorder: false
-          }
+  if (nameBtn == "Income") {
+    newDatasets = [
+      {
+        label: nameBtn,
+        backgroundColor: 'green',
+        borderColor: 'green',
+        data: getAmountPosTrans()
+      },
+    ]
+  }
+
+  if (nameBtn == "Expenditure") {
+    newDatasets = [
+      {
+        label: nameBtn,
+        backgroundColor: 'red',
+        borderColor: 'red',
+        data: getAmountNegTrans()
+      }
+    ]
+  }
+
+  const newData = {
+    labels: getDateLocalStorage(),
+    datasets: newDatasets
+  };
+
+  const options = {
+    maintainAspectRatio: false,
+    aspectRatio: 0.8,
+    plugins: {
+      legend: {
+        labels: {
+          fontColor: 'blue'
         }
       }
-    };
-    setChartData(data)
-    setChartOptions(options)
-  }, [])
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: 'blue',
+          font: {
+            weight: 500
+          }
+        },
+        grid: {
+
+          display: false,
+          drawBorder: false
+        }
+      },
+      y: {
+        ticks: {
+          color: 'orangered'
+        },
+        grid: {
+          color: 'blue',
+          drawBorder: false
+        }
+      }
+    }
+  };
 
   return (
-    <div>
-      <h1></h1>
-      <Chart type="bar" data={chartData} options={chartOptions} />
+    <div className="card">
+      <Chart type="bar" data={newData} options={options} />
     </div>
   )
 }
-
-export default DataChart
