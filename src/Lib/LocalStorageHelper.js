@@ -154,39 +154,39 @@ export function getAmountNegTrans() {
 
                 if (arr[i].price < 0) {
                     amount += arr[i].price
-                    amountArr.push(amount)
+                    amountArr.push(Math.abs(amount))
                 }
-                amountArr.push(amount)
+                amountArr.push(Math.abs(amount))
             }
 
             if (arr[i].price < 0) {
                 amount += arr[i].price
             }
         } else {
-            //debugger;
+
             if (i == (length - 1)) {
 
                 if (arr[i].price < 0) {
                     amount += arr[i].price
-                    amountArr.push(amount)
+                    amountArr.push(Math.abs(amount))
                 }
-                amountArr.push(amount)
+                amountArr.push(Math.abs(amount))
             }
 
             if (arr[i].price < 0) {
-                amountArr.push(amount)
+                amountArr.push(Math.abs(amount))
                 amount = 0
                 amount += arr[i].price
                 date = arr[i].date
 
             } else {
                 date = arr[i].date
-                amountArr.push(amount)
+                amountArr.push(Math.abs(amount))
                 amount = 0
             }
         }
     }
-    return Math.abs(x)
+    return amountArr
 };
 
 //Getting an array of dates from local storage
@@ -225,17 +225,17 @@ export function fillingLocalStorage() {
             { expense: "test", date: "15.03.2024", price: 500 },
             { expense: "test", date: "15.03.2024", price: -5 },
             { expense: "test", date: "15.03.2024", price: 50 },
-            { expense: "test", date: "15.03.2024", price: 500 },
+            { expense: "test", date: "15.03.2024", price: 50 },
             { expense: "test", date: "15.03.2024", price: -50 },
-            { expense: "test", date: "15.03.2024", price: 500 },
+            { expense: "test", date: "15.03.2024", price: 50 },
             { expense: "test", date: "15.03.2024", price: -5 },
             { expense: "test", date: "15.03.2024", price: 50 },
-            { expense: "test", date: "15.03.2024", price: 500 },
+            { expense: "test", date: "15.03.2024", price: 50 },
             { expense: "test", date: "15.03.2024", price: -50 },
             { expense: "test", date: "16.03.2024", price: 5 },
             { expense: "test", date: "16.03.2024", price: 500 },
             { expense: "test", date: "16.03.2024", price: -5 },
-            { expense: "test", date: "16.03.2024", price: 5000 },
+            { expense: "test", date: "16.03.2024", price: 50 },
             { expense: "test", date: "16.03.2024", price: 5 },
             { expense: "test", date: "16.03.2024", price: -50 },
             { expense: "test", date: "16.03.2024", price: 5 },
@@ -255,15 +255,15 @@ export function fillingLocalStorage() {
             { expense: "test", date: "19.03.2024", price: -50 },
             { expense: "test", date: "19.03.2024", price: 5 },
             { expense: "test", date: "19.03.2024", price: 50 },
-            { expense: "test", date: "19.03.2024", price: -500 },
+            { expense: "test", date: "19.03.2024", price: -50 },
             { expense: "test", date: "19.03.2024", price: 5 },
             { expense: "test", date: "19.03.2024", price: 50 },
             { expense: "test", date: "19.03.2024", price: -500 },
             { expense: "test", date: "19.03.2024", price: 50 },
             { expense: "test", date: "19.03.2024", price: 5 },
-            { expense: "test", date: "19.03.2024", price: -500 },
+            { expense: "test", date: "19.03.2024", price: -50 },
             { expense: "test", date: "20.03.2024", price: 5 },
-            { expense: "test", date: "20.03.2024", price: 5000 },
+            { expense: "test", date: "20.03.2024", price: 50 },
             { expense: "test", date: "20.03.2024", price: -5 },
             { expense: "test", date: "20.03.2024", price: 50 },
             { expense: "test", date: "20.03.2024", price: 5 },

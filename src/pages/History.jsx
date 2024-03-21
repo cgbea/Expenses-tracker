@@ -5,6 +5,7 @@ import DataChart from './DataChart'
 
 function History() {
   const [transaction, setTransaction] = useState([{ page: "History", nameBtn: "All" }]);
+  const [hidden, setHidden] = useState(true);
 
   return (
     <div>
@@ -15,11 +16,11 @@ function History() {
         <div >
           <Button
             label="Table"
-            //onClick={showTable}
+            onClick={() => setHidden(true)}
             style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px', marginRight: '1rem' }} />
           <Button
             label="Chart"
-            //onClick={showChart}
+            onClick={() => setHidden(false)}
             style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px' }} />
         </div>
       </section>
@@ -42,10 +43,8 @@ function History() {
               style={{ backgroundColor: 'red', maxwidth: '150px' }} />
           </section>
         </div>
-
         <div className="col-md-8 form">
-          <Table data={transaction} />
-          {/* <DataChart data={transaction} /> */}
+          {hidden ? <Table data={transaction} /> : <DataChart data={transaction} />}
         </div>
       </div>
     </div>
