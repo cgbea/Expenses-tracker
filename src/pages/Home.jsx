@@ -20,8 +20,8 @@ function Home() {
       <div className="row">
         <div className="col-md-12 form">
           {/* Display today's date */}
-          <div style={{ fontSize: '18px', color: 'black', marginBottom: '1rem' }}>
-            Today's Date: {dayjs().format('MMMM D, YYYY')}
+          <div style={{ fontSize: '18px', color: '#4c566a', marginBottom: '2rem', textAlign: 'center', fontWeight: 'bold' }}>
+            Today's Date: {dayjs().format('dddd, MMMM D, YYYY')}
           </div>
           {/*This section shows the balance of the account depending on input data */}
           <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", width: '100%', display: 'flex', justifyContent: 'center' }}>
