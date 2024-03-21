@@ -2,11 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Table from "./Table";
 import { getBalance } from '../Lib/LocalStorageHelper'
+import { fillingLocalStorage } from "../Lib/LocalStorageHelper";
 import dayjs from 'dayjs'; // Import Day.js
+
 function Home() {
   // Assuming you have a balance data, for demonstration, let's use a static value
   //const [transaction, setTransaction] = useState([{ page: "Home" }]);
   const transaction = [{ page: "Home" }]
+
+  //this function fills local storage with random transactions.
+  //only for testing the application.
+  //you can delete
+  fillingLocalStorage()
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: "column" }}>
       <div className="row">
@@ -25,7 +33,7 @@ function Home() {
         </div>
         <div style={{ display: "flex", gap: "2rem", justifyContent: "center", margin: "2rem" }}>
           {/*Button to show income data on the table */}
-          <Link to="/income"><button onClick={<Link to="/income" />} style={{ backgroundColor: 'green', color: 'white' }}>Income</button></Link>
+          <Link to="/income"><button style={{ backgroundColor: 'green', color: 'white' }}>Income</button></Link>
           {/*Button to show expense data on the table */}
           <Link to="/expenditure"><button style={{ backgroundColor: 'red', color: 'white' }}>Expense</button></Link>
         </div>
