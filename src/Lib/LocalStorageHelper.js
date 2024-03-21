@@ -23,7 +23,7 @@ export function readLocalStorage() {
     }
 
     // Return array
-    return transactionArray;
+    return transactionArray.reverse();
 };
 
 // Function that returns balance
@@ -154,39 +154,39 @@ export function getAmountNegTrans() {
 
                 if (arr[i].price < 0) {
                     amount += arr[i].price
-                    amountArr.push(Math.abs(amount))
+                    amountArr.push(amount)
                 }
-                amountArr.push(Math.abs(amount))
+                amountArr.push(amount)
             }
 
             if (arr[i].price < 0) {
                 amount += arr[i].price
             }
         } else {
-
+            //debugger;
             if (i == (length - 1)) {
 
                 if (arr[i].price < 0) {
                     amount += arr[i].price
-                    amountArr.push(Math.abs(amount))
+                    amountArr.push(amount)
                 }
-                amountArr.push(Math.abs(amount))
+                amountArr.push(amount)
             }
 
             if (arr[i].price < 0) {
-                amountArr.push(Math.abs(amount))
+                amountArr.push(amount)
                 amount = 0
                 amount += arr[i].price
                 date = arr[i].date
 
             } else {
                 date = arr[i].date
-                amountArr.push(Math.abs(amount))
+                amountArr.push(amount)
                 amount = 0
             }
         }
     }
-    return amountArr
+    return Math.abs(x)
 };
 
 //Getting an array of dates from local storage
@@ -225,17 +225,17 @@ export function fillingLocalStorage() {
             { expense: "test", date: "15.03.2024", price: 500 },
             { expense: "test", date: "15.03.2024", price: -5 },
             { expense: "test", date: "15.03.2024", price: 50 },
-            { expense: "test", date: "15.03.2024", price: -500 },
+            { expense: "test", date: "15.03.2024", price: 500 },
             { expense: "test", date: "15.03.2024", price: -50 },
             { expense: "test", date: "15.03.2024", price: 500 },
             { expense: "test", date: "15.03.2024", price: -5 },
             { expense: "test", date: "15.03.2024", price: 50 },
-            { expense: "test", date: "15.03.2024", price: 50 },
+            { expense: "test", date: "15.03.2024", price: 500 },
             { expense: "test", date: "15.03.2024", price: -50 },
             { expense: "test", date: "16.03.2024", price: 5 },
             { expense: "test", date: "16.03.2024", price: 500 },
             { expense: "test", date: "16.03.2024", price: -5 },
-            { expense: "test", date: "16.03.2024", price: 500 },
+            { expense: "test", date: "16.03.2024", price: 5000 },
             { expense: "test", date: "16.03.2024", price: 5 },
             { expense: "test", date: "16.03.2024", price: -50 },
             { expense: "test", date: "16.03.2024", price: 5 },
@@ -255,7 +255,7 @@ export function fillingLocalStorage() {
             { expense: "test", date: "19.03.2024", price: -50 },
             { expense: "test", date: "19.03.2024", price: 5 },
             { expense: "test", date: "19.03.2024", price: 50 },
-            { expense: "test", date: "19.03.2024", price: -50 },
+            { expense: "test", date: "19.03.2024", price: -500 },
             { expense: "test", date: "19.03.2024", price: 5 },
             { expense: "test", date: "19.03.2024", price: 50 },
             { expense: "test", date: "19.03.2024", price: -500 },
@@ -263,7 +263,7 @@ export function fillingLocalStorage() {
             { expense: "test", date: "19.03.2024", price: 5 },
             { expense: "test", date: "19.03.2024", price: -500 },
             { expense: "test", date: "20.03.2024", price: 5 },
-            { expense: "test", date: "20.03.2024", price: 500 },
+            { expense: "test", date: "20.03.2024", price: 5000 },
             { expense: "test", date: "20.03.2024", price: -5 },
             { expense: "test", date: "20.03.2024", price: 50 },
             { expense: "test", date: "20.03.2024", price: 5 },
