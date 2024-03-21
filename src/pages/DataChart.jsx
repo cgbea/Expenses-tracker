@@ -8,20 +8,21 @@ const DataChart = () => {
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
+  //Data to be displayed on the chart
     const data = {
       labels: [],
       incomeData: [{
         label: 'Ingoing',
         backgroundColor: 'green',
-        data: ''
+        data: ""
       }],
       expenditureData: [{
         label: 'Outgoing',
         backgroundColor: 'tomato',
-        data: ''
+        data: ""
       }],
     }
-
+//Styling for the chart display
     const options = {
       maintainAspectRatio: false,
       aspectRatio: 0.8,
