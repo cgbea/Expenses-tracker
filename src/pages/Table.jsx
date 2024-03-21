@@ -13,6 +13,7 @@ const IncomeTable = (props) => {
   let footer = 'Total: '
   let value = []
 
+//Get data from local storage  
   function showValue(page, nameBtn) {
     if (page == "Home" || nameBtn == "All") {
       value = readLocalStorage()

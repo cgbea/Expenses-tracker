@@ -9,15 +9,15 @@ function NavBar() {
     <Navbar expand="lg" className="navparent">
       <Navbar.Brand>
         <img src={logo} alt="logo" className="logo" />
-        <Link to="./index.html" className="navbar-brand">SpendSense</Link>
+        <Link to="/" className="navbar-brand">SpendSense</Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link as={Link} to="/">Home</Nav.Link>
           <Nav.Link as={Link} to="/income">Income</Nav.Link>
-          <Nav.Link as={Link} to="/history">Expenditure</Nav.Link>
-          <Nav.Link as={Link} to="/expenditure">History</Nav.Link>
+          <Nav.Link as={Link} to="/expenditure">Expenditure</Nav.Link>
+          <Nav.Link as={Link} to="/history">History</Nav.Link>
           <Nav.Link as={Link} to="/about">About</Nav.Link>
         </Nav>
       </Navbar.Collapse>
