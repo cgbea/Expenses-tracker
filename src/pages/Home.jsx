@@ -31,7 +31,7 @@ function Home() {
           </section>
           <Table data={transaction} />
         </div>
-        <div style={{ display: "flex", gap: "2rem", justifyContent: "center", margin: "2rem" }}>
+        <div style={{ display: "flex", gap: "2rem", justifyContent: "center", marginTop: "2rem" }}>
           {/*Button to show income data on the table */}
           <Link to="/income"><button style={{ backgroundColor: 'green', color: 'white' }}>Income</button></Link>
           {/*Button to show expense data on the table */}
