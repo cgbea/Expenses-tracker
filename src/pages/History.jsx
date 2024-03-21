@@ -4,54 +4,42 @@ import Table from './Table'
 import DataChart from './DataChart'
 
 function History() {
-  const [transaction, setTransaction] = useState([{ page: "History", btn: "" }]);
+  const [transaction, setTransaction] = useState([{ page: "History", nameBtn: "All" }]);
 
-  const show = (event) => {
-    console.log(event)
-  }
-
-  const showTable = (event) => {
-
-  }
 
   return (
     <div>
       <h1>History</h1>
 
-
-
       <section
         style={{ marginTop: '25px', display: 'flex', justifyContent: 'flex-end' }}>
-          <div >
-        <Button
-          label="Table"
-          onClick={showTable}
-          style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px', marginRight: '1rem' }} />
-        <Button
-          label="Chart"
-          onClick={showTable}
-          style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px' }} />
-          </div>
+        <div >
+          <Button
+            label="Table"
+            //onClick={showTable}
+            style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px', marginRight: '1rem' }} />
+          <Button
+            label="Chart"
+            //onClick={showTable}
+            style={{ backgroundColor: 'orange', marginBottom: '5px', width: '130px' }} />
+        </div>
       </section>
-
-
-
 
       <div className="row">
         <div className="col-md-4 form">
           <section
-            style={{ float: 'left', marginLeft: '70px', display:'flex', flexDirection:'column' }}>
-            <Button transaction={transaction} setTransaction={setTransaction}
+            style={{ float: 'left', marginLeft: '70px', display: 'flex', flexDirection: 'column' }}>
+            <Button
               label="All in one"
-              onClick={show}
+              onClick={() => setTransaction([{ page: "History", nameBtn: "All" }])}
               style={{ marginTop: '80px', backgroundColor: 'orange', marginBottom: '5px', maxwidth: '150px' }} />
-            <Button transaction={transaction} setTransaction={setTransaction}
+            <Button
               label="Income"
-              onClick={show}
+              onClick={() => setTransaction([{ page: "History", nameBtn: "Income" }])}
               style={{ backgroundColor: 'orange', marginBottom: '5px', maxwidth: '10px' }} />
-            <Button transaction={transaction} setTransaction={setTransaction}
+            <Button
               label="Expenditure"
-              onClick={show}
+              onClick={() => setTransaction([{ page: "History", nameBtn: "Expenditure" }])}
               style={{ backgroundColor: 'orange', maxwidth: '150px' }} />
           </section>
         </div>

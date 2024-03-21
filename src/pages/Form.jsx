@@ -103,9 +103,7 @@ const Form = (props) => {
           />
         </div>
       </section>
-      
 
-      
       <Modal show={showErrorModal} onHide={() => setShowErrorModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Error</Modal.Title>
@@ -120,7 +118,5 @@ const Form = (props) => {
     </div>
   );
 };
-
-
 
 export default Form;
