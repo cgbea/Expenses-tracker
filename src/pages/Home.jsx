@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Table from "./Table";
 import { getBalance } from '../Lib/LocalStorageHelper'
 import dayjs from 'dayjs'; // Import Day.js
@@ -14,7 +15,7 @@ function Home() {
           <div style={{ fontSize: '18px', color: 'black', marginBottom: '1rem' }}>
             Today's Date: {dayjs().format('MMMM D, YYYY')}
           </div>
-  {/*This section shows the balance of the account depending on input data */}
+          {/*This section shows the balance of the account depending on input data */}
           <section style={{ padding: '16px', borderRadius: "16px", backgroundColor: "orange", width: '100%', display: 'flex', justifyContent: 'center' }}>
             <div style={{ fontSize: '24px', color: 'white' }}>
               Balance: £{getBalance()}
@@ -23,10 +24,10 @@ function Home() {
           <Table data={transaction} />
         </div>
         <div style={{ display: "flex", gap: "2rem", justifyContent: "center", margin: "2rem" }}>
-  {/*Button to show income data on the table */}
-          <button style={{ backgroundColor: 'green', color: 'white' }}>Income</button>
-  {/*Button to show expense data on the table */}
-          <button style={{ backgroundColor: 'red', color: 'white' }}>Expense</button>
+          {/*Button to show income data on the table */}
+          <Link to="/income"><button onClick={<Link to="/income" />} style={{ backgroundColor: 'green', color: 'white' }}>Income</button></Link>
+          {/*Button to show expense data on the table */}
+          <Link to="/expenditure"><button style={{ backgroundColor: 'red', color: 'white' }}>Expense</button></Link>
         </div>
       </div>
     </div>
