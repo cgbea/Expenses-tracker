@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Table from "./Table";
 import { getBalance } from '../Lib/LocalStorageHelper'
 import { fillingLocalStorage } from "../Lib/LocalStorageHelper";
-import dayjs from 'dayjs'; // Import Day.js
+import dayjs from 'dayjs'; 
 
 function Home() {
   const transaction = [{ page: "Home" }]
