@@ -3,6 +3,7 @@ import { useState } from 'react'
 import 'primereact/resources/themes/mira/theme.css'
 import { Chart } from 'primereact/chart';
 
+
 const DataChart = () => {
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
@@ -10,15 +11,15 @@ const DataChart = () => {
   useEffect(() => {
   //Data to be displayed on the chart
     const data = {
-      labels: [],
+      labels: '',
       incomeData: [{
         label: 'Ingoing',
         backgroundColor: 'green',
-        data: ""
+        data: ''
       }],
       expenditureData: [{
         label: 'Outgoing',
-        backgroundColor: 'tomato',
+        backgroundColor: 'red',
         data: ""
       }],
     }
@@ -26,6 +27,13 @@ const DataChart = () => {
     const options = {
       maintainAspectRatio: false,
       aspectRatio: 0.8,
+      plugins: {
+        legend: {
+            labels: {
+                fontColor: 'black'
+            }
+        }
+    },
       scales: {
         x: {
           ticks: {
