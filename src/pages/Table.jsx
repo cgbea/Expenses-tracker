@@ -36,6 +36,7 @@ const IncomeTable = (props) => {
 
   return (
     <div>
+    {/* Styling and headers for table display */}
       <DataTable
         value={value}
         header={header}

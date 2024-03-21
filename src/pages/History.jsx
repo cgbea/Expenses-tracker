@@ -6,7 +6,6 @@ import DataChart from './DataChart'
 function History() {
   const [transaction, setTransaction] = useState([{ page: "History", nameBtn: "All" }]);
 
-
   return (
     <div>
       <h1>History</h1>

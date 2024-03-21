@@ -71,6 +71,7 @@ const Form = (props) => {
   return (
     <div>
       <section>
+  {/*Input field for transaction name */}
         <input
           className="form-control form-control-lg"
           type="text"
@@ -81,6 +82,7 @@ const Form = (props) => {
           aria-label=".form-control-lg example"
           style={{ padding: "15px", marginBottom: "10px", marginTop: "30px" }}
         />
+    {/*Input field for transaction amount */}
         <input
           className="form-control form-control-lg"
           type="number"
@@ -93,6 +95,7 @@ const Form = (props) => {
           aria-label=".form-control-lg example"
           style={{ padding: "15px", marginBottom: "10px" }}
         />
+    {/*Buttons to save or clear input field */}
         <div style={{ float: "left" }}>
           <Button
             label="Save"
