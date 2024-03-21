@@ -16,21 +16,26 @@ const Form = (props) => {
   //When save button is clicked input data is added to the table.
   const saveInput = (event) => {
     event.preventDefault();
+    // If input fields are empty error message is returned and the save button will not work.
     if (inputData.expense === "" || inputData.price === "") {
       setErrorMessage("Please enter both the name of transaction and transaction amount.");
       setShowErrorModal(true);
       return;
+    //If the value input on income page is negative error message displays
     } else {
       if (page === "Income" && inputData.price < 0) {
         setErrorMessage("Income values must be positive");
         setShowErrorModal(true);
         return;
       }
+    // If the value input on expenditure page is positive an error message displays
       if (page === "Expenditure" && inputData.price > 0) {
         setErrorMessage("Expenditure values must be negative");
         setShowErrorModal(true);
         return;
       }
+
+    //Data added to local storage
       let price = parseInt(inputData.price);
       inputData.date = new Date().toLocaleDateString();
       inputData.price = price;
@@ -46,11 +51,11 @@ const Form = (props) => {
     }
   };
 
-  //When clear button is clicked both input fields are cleared
+//When clear button is clicked both input fields are cleared
   const clearInput = () => {
     setInputData({ expense: "", price: "" });
   };
-
+//Function to handle the input field data
   const handleInputChange = (event) => {
     let name = event.target.name;
     let newValue = event.target.value;
