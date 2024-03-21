@@ -6,8 +6,6 @@ import { fillingLocalStorage } from "../Lib/LocalStorageHelper";
 import dayjs from 'dayjs'; // Import Day.js
 
 function Home() {
-  // Assuming you have a balance data, for demonstration, let's use a static value
-  //const [transaction, setTransaction] = useState([{ page: "Home" }]);
   const transaction = [{ page: "Home" }]
 
   //this function fills local storage with random transactions.
